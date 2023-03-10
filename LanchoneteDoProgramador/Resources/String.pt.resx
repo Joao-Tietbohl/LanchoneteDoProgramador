@@ -132,11 +132,17 @@
   <data name="CadastroProduto" xml:space="preserve">
     <value>Cadastro produto:</value>
   </data>
+  <data name="CadastroVenda" xml:space="preserve">
+    <value>Cadastrar Venda:</value>
+  </data>
+  <data name="Cpf" xml:space="preserve">
+    <value>Digite o CPF:</value>
+  </data>
   <data name="Digite o ID" xml:space="preserve">
     <value>Digite o ID:</value>
   </data>
   <data name="DigiteIdFornecedor" xml:space="preserve">
-    <value>Digite o Id do Fornecedor</value>
+    <value>Digite o Id do Fornecedor:</value>
   </data>
   <data name="EditarFornecedor" xml:space="preserve">
     <value>Editar fornecedor</value>
@@ -159,8 +165,17 @@
   <data name="ExcluirVenda" xml:space="preserve">
     <value>Excluir venda</value>
   </data>
+  <data name="FormaPagamento" xml:space="preserve">
+    <value>Qual a forma de Pagamento?</value>
+  </data>
   <data name="Fornecedores" xml:space="preserve">
     <value>Fornecedores</value>
+  </data>
+  <data name="GerarPDF" xml:space="preserve">
+    <value>Gerar PDF</value>
+  </data>
+  <data name="IdProduto" xml:space="preserve">
+    <value>Selecione o ID do produto:</value>
   </data>
   <data name="ListarFornecedores" xml:space="preserve">
     <value>Listar fornecedores</value>
@@ -182,6 +197,9 @@
   </data>
   <data name="Sair" xml:space="preserve">
     <value>Sair</value>
+  </data>
+  <data name="SelecionarNovoProduto" xml:space="preserve">
+    <value>Deseja selecionar mais produtos? (s, n)</value>
   </data>
   <data name="SelecioneOpcaoMenu" xml:space="preserve">
     <value>Selecione a opção desejada:</value>

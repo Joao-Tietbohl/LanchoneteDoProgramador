@@ -9,26 +9,18 @@ namespace LanchoneteDoProgramador.Entidades
 {
     public class Venda
     {
+
         public int Id { get; set; }
         public List<Produto> Produtos { get; set; }
-        public FormaDePagamento FormaDePagamento { get; set; }
+        public string FormaDePagamento { get; set; }
         public string CpfCliente { get; set; }
 
-        public void AdicionarProduto(Produto produto, int quantidade)
+
+        public Venda(int id, List<Produto> produtos, string formaPagamento, string cpfCliente)
         {
-            for (int i = 0; i < quantidade; i++)
-            {
-                Produtos.Add(produto);
-            }
+            Id = id; Produtos = produtos; FormaDePagamento = formaPagamento; CpfCliente = cpfCliente;
         }
 
-        public void RemoverProduto(Produto produto, int quantidade)
-        {
-            for (int i = 0; i < quantidade; i++)
-            {
-                Produtos.Remove(produto);
-            }
-        }
 
         public decimal CalcularValorTotal()
         {
@@ -39,14 +31,19 @@ namespace LanchoneteDoProgramador.Entidades
             }
             return valorTotal;
         }
+
+        public override string ToString()
+        {
+
+            string a = $"ID = {Id}, ";
+            foreach (var produto in Produtos) { 
+                a = a+ produto.ToString() + ", "; 
+            }
+
+            a = a + $"Forma de Pagamento = {FormaDePagamento}, CPF = {CpfCliente}";
+
+            return a;
+        }
     }
 
-    public enum FormaDePagamento
-    {
-        Dinheiro,
-        CartaoDeCredito,
-        CartaoDeDebito,
-        TransferenciaBancaria,
-        Pix
-    }
 }

@@ -25,7 +25,7 @@ namespace LanchoneteDoProgramador
 
             var servicoFornecedor = new ServicoFornecedor(repositorioFornecedor, linguagem);
             var servicoProduto = new ServicoProduto(repositorioProduto, repositorioFornecedor, linguagem);
-            var servicoVenda = new ServicoVenda(repositorioVenda, linguagem);
+            var servicoVenda = new ServicoVenda(repositorioVenda, repositorioProduto, linguagem);
 
             while (true)
             {
@@ -33,6 +33,7 @@ namespace LanchoneteDoProgramador
                 Console.WriteLine("1 - " + linguagem.GetMensagem("Produtos"));
                 Console.WriteLine("2 - " + linguagem.GetMensagem("Fornecedores"));
                 Console.WriteLine("3 -  " + linguagem.GetMensagem("Vendas"));
+                Console.WriteLine("4 -  " + linguagem.GetMensagem("GerarPDF"));
                 Console.WriteLine("0 - " + linguagem.GetMensagem("Sair"));
 
                 var opcao = Console.ReadLine();
@@ -47,6 +48,9 @@ namespace LanchoneteDoProgramador
                         break;
                     case "3":
                         MenuVendas(servicoVenda, linguagem);
+                        break;
+                    case "4":
+                        GerarPDF();
                         break;
                     case "0":
                         return;
@@ -75,13 +79,13 @@ namespace LanchoneteDoProgramador
                 switch (opcao)
                 {
                     case "1":
-                       // servicoProduto.ListarProdutos();
+                        servicoProduto.ListarProdutos();
                         break;
                     case "2":
-                       // servicoProduto.CadastrarProduto();
+                        servicoProduto.CadastrarProduto();
                         break;
                     case "3":
-                      //  servicoProduto.ExcluirProduto();
+                        servicoProduto.ExcluirProduto();
                         break;
                     case "0":
                         return;
@@ -142,13 +146,13 @@ namespace LanchoneteDoProgramador
                 switch (opcao)
                 {
                     case "1":
-                       // servicoVenda.ListarVendas(servicoVenda);
+                        servicoVenda.ListarVendas();
                         break;
                     case "2":
-                        //servicoVenda.CadastrarVenda(servicoVenda, servicoVenda);
+                        servicoVenda.CadastrarVenda();
                         break;
                     case "3":
-                        //servicoVenda.ExcluirVenda(servicoVenda);
+                        servicoVenda.ExcluirVenda();
                         break;
                     case "0":
                         return;
@@ -159,6 +163,11 @@ namespace LanchoneteDoProgramador
 
                 Console.WriteLine();
             }
+        }
+
+        public static void GerarPDF()
+        {
+
         }
     } 
 }

@@ -14,11 +14,16 @@ namespace LanchoneteDoProgramador.Entidades
         public int QuantidadeEmEstoque { get; set; }
         public Fornecedor Fornecedor { get; set; }
 
-        public Produto(int id, string titulo, decimal valor, Fornecedor fornecedor)
+        public Produto(int id, string titulo, decimal valor, int quantidade, Fornecedor fornecedor)
         {
             id = Id; Titulo = titulo; ValorUnitario = valor;
             Fornecedor = fornecedor;
 
+        }
+
+        public override string ToString()
+        {
+            return $"Id = {Id}, Titulo = {Titulo}, Valor Unitario = {ValorUnitario}, Quantidade = {QuantidadeEmEstoque}, Fornecedor = {Fornecedor?.Nome}";
         }
     }
 }

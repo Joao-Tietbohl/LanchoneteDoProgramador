@@ -12,7 +12,7 @@ namespace LanchoneteDoProgramador.Repositorios
 
         public Fornecedor BuscarPorId(int id)
         {
-           return (Fornecedor) _listaDeObjetos.Where(x => x.Id == id);
+           return (Fornecedor) _listaDeObjetos.Find(x => x.Id == id);
         }
     }
 }

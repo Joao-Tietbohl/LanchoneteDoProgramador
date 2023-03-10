@@ -23,7 +23,12 @@ namespace LanchoneteDoProgramador.Servicos
 
         public void ListarProdutos()
         {
-            repositorioProduto.BuscarTodos();
+            var produtos = repositorioProduto.BuscarTodos();
+
+            foreach (var p in produtos)
+            {
+                Console.WriteLine(p);
+            }
         }
 
         public void CadastrarProduto()
@@ -40,7 +45,21 @@ namespace LanchoneteDoProgramador.Servicos
             int idF = Convert.ToInt32(Console.ReadLine());
             var fornecedor = repositorioFornecedor.BuscarPorId(idF);
 
-            Produto produto = new Produto(id, titulo, valor, fornecedor);
+            int quantidade = repositorioProduto.BuscarTodos().Count;
+
+            Produto produto = new Produto(id, titulo, valor, quantidade, fornecedor);
+
+            repositorioProduto.Adicionar(produto);
+        }
+
+        public void ExcluirProduto()
+        {
+            Console.WriteLine(linguagem.GetMensagem("DigiteID"));
+            int id = Convert.ToInt32(Console.ReadLine());
+
+            var produto = repositorioProduto.BuscarPorId(id);
+
+            repositorioProduto.Remover(produto);
         }
     }
 }

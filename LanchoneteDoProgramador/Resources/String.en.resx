@@ -132,6 +132,12 @@
   <data name="CadastroProduto" xml:space="preserve">
     <value>Register product:</value>
   </data>
+  <data name="CadastroVenda" xml:space="preserve">
+    <value>Register sale:</value>
+  </data>
+  <data name="Cpf" xml:space="preserve">
+    <value>Type the CPF:</value>
+  </data>
   <data name="DigiteID" xml:space="preserve">
     <value>Type the ID number:</value>
   </data>
@@ -159,8 +165,17 @@
   <data name="ExcluirVenda" xml:space="preserve">
     <value>Remove sale</value>
   </data>
+  <data name="FormaPagamento" xml:space="preserve">
+    <value>What is the form of payment?</value>
+  </data>
   <data name="Fornecedores" xml:space="preserve">
     <value>Suppliers</value>
+  </data>
+  <data name="GerarPDF" xml:space="preserve">
+    <value>Generate PDF</value>
+  </data>
+  <data name="IdProduto" xml:space="preserve">
+    <value>Type product ID:</value>
   </data>
   <data name="ListarFornecedores" xml:space="preserve">
     <value>List suppliers</value>
@@ -182,6 +197,9 @@
   </data>
   <data name="Sair" xml:space="preserve">
     <value>Leave</value>
+  </data>
+  <data name="SelecionarNovoProduto" xml:space="preserve">
+    <value>Do you want to select more products? (y, n)</value>
   </data>
   <data name="SelecioneOpcaoMenu" xml:space="preserve">
     <value>Choose an option:</value>

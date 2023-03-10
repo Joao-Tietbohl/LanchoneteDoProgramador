@@ -11,7 +11,7 @@ namespace LanchoneteDoProgramador.Repositorios
     {
         public Produto BuscarPorId(int id)
         {
-            return (Produto)_listaDeObjetos.Where(x => x.Id == id);
+            return (Produto)_listaDeObjetos.Find(x => x.Id == id);
         }
     }
 }
