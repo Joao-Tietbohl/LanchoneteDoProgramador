@@ -16,7 +16,7 @@ namespace LanchoneteDoProgramador.Entidades
 
         public Produto(int id, string titulo, decimal valor, int quantidade, Fornecedor fornecedor)
         {
-            id = Id; Titulo = titulo; ValorUnitario = valor;
+            Id = id; Titulo = titulo; ValorUnitario = valor;
             Fornecedor = fornecedor;
 
         }
