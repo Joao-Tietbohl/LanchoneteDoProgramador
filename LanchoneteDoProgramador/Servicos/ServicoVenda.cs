@@ -51,7 +51,7 @@ namespace LanchoneteDoProgramador.Servicos
                 Produto p = repositorioProduto.BuscarPorId(idP);
                 produtos.Add(p);
 
-                Console.WriteLine(linguagem.GetMensagem("IdProduto"));
+                Console.WriteLine(linguagem.GetMensagem("SelecionarNovoProduto"));
                 string resposta = Console.ReadLine();
                 if (resposta == "n" || resposta == "nao" || resposta == "não" || resposta == "no")
                 {
